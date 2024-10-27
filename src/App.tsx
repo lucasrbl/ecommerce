@@ -2,11 +2,9 @@ import { Navbar } from './components/Navbar';
 
 function App() {
   return (
-    <div>
+    <div className='py-10 mx-40'>
       <Navbar />
-      <div className='bg-green-500'></div>
     </div>
   );
 }
-
 export default App;
