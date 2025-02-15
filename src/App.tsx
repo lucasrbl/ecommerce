@@ -1,9 +1,9 @@
-import { Navbar } from './components/Navbar';
+import { Home } from './Pages';
 
 function App() {
   return (
-    <div className='py-10 mx-40'>
-      <Navbar />
+    <div>
+      <Home />
     </div>
   );
 }
