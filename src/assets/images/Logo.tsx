@@ -8,8 +8,8 @@ export function Logo({ className }: LogoPropsType) {
   return (
     <img
       src={logo}
-      alt='Logo Sneakers'
-      aria-hidden='true'
+      alt="Logo Sneakers"
+      aria-hidden="true"
       className={className}
     />
   );

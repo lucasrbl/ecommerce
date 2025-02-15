@@ -1,26 +1,28 @@
-type RoundedImagePropsType = {
+type ImagePropsType = {
   className?: string;
   src: string;
   alt: string;
   isAriaHidden?: boolean;
-  size: number;
+  width?: number;
+  height?: number;
 };
 
-export default function RoundedImage({
+export function Image({
   alt,
   isAriaHidden,
   src,
   className,
-  size,
-}: RoundedImagePropsType) {
+  height,
+  width,
+}: ImagePropsType) {
   return (
     <img
       src={src}
       alt={alt}
-      className={`rounded-full ${className}`}
+      className={className}
       aria-hidden={isAriaHidden}
-      width={size}
-      height={size}
+      width={width}
+      height={height}
     />
   );
 }
