@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
+
 import { Logo } from '../../assets/images/Logo';
-import CartIcon from '../../assets/icons/CartIcon';
-import RoundedImage from '../../assets/images/RoundedImage';
-import avatar from '../../assets/images/image-avatar.png';
+import { CartIcon } from '../../assets/icons/CartIcon';
+import { Image } from '../../assets/images/Image';
+import { avatarImage } from '../../assets/';
 
 type NavbarLinks = {
   key: string;
@@ -39,34 +40,33 @@ const links: NavbarLinks = [
 export function Navbar() {
   return (
     <>
-      <nav className='flex gap-12 items-center justify-between'>
-        <div className='flex gap-x-14'>
+      <nav className="flex gap-12 items-center justify-between">
+        <div className="flex gap-x-14">
           <div>
             <Logo />
           </div>
 
-          <ul className='flex gap-7'>
-            {links.map((link) => (
-              <li className='' key={link.key}>
-                {link.text}
+          <ul className="flex gap-7">
+            {links.map(link => (
+              <li className="" key={link.key}>
+                <a href="#">{link.text}</a>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className='flex gap-8 items-center'>
-          <CartIcon />
-          <RoundedImage
-            src={avatar}
+        <div className="flex gap-8 items-center">
+          <CartIcon size="20" />
+          <Image
+            src={avatarImage}
             isAriaHidden
-            size={50}
-            alt='Imagem de perfil'
+            width={50}
+            height={50}
+            alt="Imagem de perfil"
           />
-          {/* icone de carrinho */}
-          {/* foto*/}
         </div>
       </nav>
-      <div className='w-full h-px bg-grayish-blue mt-10'></div>
+      <div className="w-full h-px bg-grayish-blue mt-8" />
     </>
   );
 }
